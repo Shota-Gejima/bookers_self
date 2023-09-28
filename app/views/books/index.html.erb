@@ -1,4 +1,5 @@
-<h1>Books</h1>
+<h1></h1>
+<h1><%= link_to "Books", root_path %></h1>
 
 <table>
   <thead>
@@ -25,15 +26,4 @@
 
 <%= render "errors", book: @book %>
   
-
-<%= form_with model: @book do |f| %>
-  
-  <label>Title</label>
-  <%= f.text_field :title %><br>
-  
-  <label>Body</label>
-  <%= f.text_area :body %><br>
-  
-  <%= f.submit 'Create Book' %>
-  
-<% end %>
+<%= render "new_book", book: @book %>
